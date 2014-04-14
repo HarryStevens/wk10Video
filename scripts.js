@@ -2,28 +2,36 @@
  * @author Harry Stevens
  */
 
-function modals() {
-	$('.btn-cyclone').on("click", function() {
-		$('.cyclone-body').html("<iframe width='100%' height='400px' src='http://www.youtube.com/embed/lxSCNto21mU?html5=1' frameborder='0' allowfullscreen>");
-		$('#cycloneModal').modal();
-	});
-	$('.btn-wheel').on("click", function() {
-		$('.wheel-body').html("<iframe width='100%' height='400px' src='http://www.youtube.com/embed/OK25N1Pw14w?html5=1' frameborder='0' allowfullscreen>");
-		$('#wheelModal').modal();
-	});
-	$('.btn-para').on("click", function() {
-		$('.para-body').html("<iframe width='100%' height='400px' src='http://www.youtube.com/embed/SIR0jxqfl4c?html5=1' frameborder='0' allowfullscreen>");
-		$('#paraModal').modal();
-	});
+var moreInfo = {
+	"cycloneInfo":"More info about cyclone.",
+	"wheelInfo":"More info about whonder wheel.",
+	"paraInfo":"More info about parachute jump."
+}
+var modalVideo = {
+	"cycloneMod":"<iframe width='100%' height='400px' src='http://www.youtube.com/embed/lxSCNto21mU?html5=1' frameborder='0' allowfullscreen>",
+	"wheelMod":"<iframe width='100%' height='400px' src='http://www.youtube.com/embed/OK25N1Pw14w?html5=1' frameborder='0' allowfullscreen>",
+	"paraMod":"<iframe width='100%' height='400px' src='http://www.youtube.com/embed/SIR0jxqfl4c?html5=1' frameborder='0' allowfullscreen>"
 }
 
-function closeVideo() {
+function modals() {
+	$(".btn-ride").on("click", function(e) {
+		var btnID = e.target.id;
+		$("#"+btnID+"Body").html(modalVideo[btnID]);
+		$("#"+btnID+"Modal").modal();
+	});
 	$('.close-window').on("click", function() {
 		$('.modal-body').html("&nbsp;");
 	});
 }
 
+function info() {
+	$('.moreInfo').on("click", function(e) {
+		var myID = e.target.id;
+		$("#"+myID+"Div").append(moreInfo[myID+"Info"]);
+	});
+}
+
 $(document).ready(function() {
 	modals();
-	closeVideo();
+	info();
 });

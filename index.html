@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Week 9 Class | Bootstrap Practice</title>
+		<title>Week 10 Video | Bootstrap Practice</title>
 		<!--Scripts-->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -67,15 +67,20 @@
 			<!--			<h1>Coney Island Rides</h1>-->
 
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-5" id="cycloneDiv">
 					<a name="cyclone"></a><h3>Cyclone</h3>
 					<p>
 						The Cyclone is a historic wooden roller coaster that opened on June 26, 1927 in the Coney Island section of Brooklyn, New York City.
 					</p>
 					<p>
 						<!-- Button trigger modal -->
-						<button class="btn btn-success btn-lg btn-cyclone">
+						<button class="btn btn-success btn-lg btn-ride" id="cycloneMod">
 							See it!
+						</button>
+					
+						<!-- Button trigger more info -->
+						<button class="btn btn-success btn-lg moreInfo" id="cyclone">
+							Read more
 						</button>
 					</p>
 				</div>
@@ -85,15 +90,20 @@
 			</div><!--End Row-->
 
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-5" id="wheelDiv">
 					<a name="wonder-wheel"></a><h3>Wonder Wheel</h3>
 					<p>
 						The Wonder Wheel is a 150-foot tall eccentric Ferris wheel located at Deno's Wonder Wheel Amusement Park at Coney Island.
 					</p>
 					<p>
 						<!-- Button trigger modal -->
-						<button class="btn btn-success btn-lg btn-wheel">
+						<button class="btn btn-success btn-lg btn-ride" id="wheelMod">
 							See it!
+						</button>
+						
+						<!-- Button trigger more info -->
+						<button class="btn btn-success btn-lg moreInfo" id="wheel">
+							Read more
 						</button>
 					</p>
 				</div>
@@ -103,15 +113,20 @@
 			</div><!--End Row-->
 
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-5" id="paraDiv">
 					<a name="parachute"></a><h3>Parachute Jump</h3>
 					<p>
 						The Parachute Jump is a defunct amusement ride whose iconic open-frame steel structure remains a Brooklyn landmark. 250 feet tall and weighing 170 tons, it has been called the "Eiffel Tower of Brooklyn".
 					</p>
 					<p>
 						<!-- Button trigger modal -->
-						<button class="btn btn-success btn-lg btn-para">
+						<button class="btn btn-success btn-lg btn-ride" id="paraMod">
 							See it!
+						</button>
+						
+						<!-- Button trigger more info -->
+						<button class="btn btn-success btn-lg moreInfo" id="para">
+							Read more
 						</button>
 					</p>
 				</div>
@@ -124,7 +139,7 @@
 		<!-- Modals -->
 
 		<!-- Modal: Cyclone -->
-		<div class="modal fade" id="cycloneModal" tabindex="-1" role="dialog" aria-labelledby="cycloneModalLabel" aria-hidden="true">
+		<div class="modal fade" id="cycloneModModal" tabindex="-1" role="dialog" aria-labelledby="cycloneModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -133,7 +148,7 @@
 						</button>
 						<h4 class="modal-title" id="cycloneModalLabel">Riding the Cyclone</h4>
 					</div>
-					<div class="modal-body cyclone-body">
+					<div class="modal-body" id="cycloneModBody">
 						<!--Video markup here<iframe width="100%" height="400px" src="http://www.youtube.com/embed/lxSCNto21mU?html5=1" frameborder="0" allowfullscreen></iframe>-->
 					</div>
 					<div class="modal-footer">
@@ -146,7 +161,7 @@
 		</div>
 
 		<!-- Modal: Wonder Wheel -->
-		<div class="modal fade" id="wheelModal" tabindex="-1" role="dialog" aria-labelledby="wheelModalLabel" aria-hidden="true">
+		<div class="modal fade" id="wheelModModal" tabindex="-1" role="dialog" aria-labelledby="wheelModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -155,7 +170,7 @@
 						</button>
 						<h4 class="modal-title" id="wheelModalLabel">Riding the Wonder Wheel</h4>
 					</div>
-					<div class="modal-body wheel-body">
+					<div class="modal-body" id="wheelModBody">
 						<!--Video markup here<iframe width="100%" height="400px" src="http://www.youtube.com/embed/OK25N1Pw14w?html5=1" frameborder="0" allowfullscreen></iframe>-->
 					</div>
 					<div class="modal-footer">
@@ -168,7 +183,7 @@
 		</div>
 
 		<!-- Modal: Parachute Jump -->
-		<div class="modal fade" id="paraModal" tabindex="-1" role="dialog" aria-labelledby="paraModalLabel" aria-hidden="true">
+		<div class="modal fade" id="paraModModal" tabindex="-1" role="dialog" aria-labelledby="paraModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -177,7 +192,7 @@
 						</button>
 						<h4 class="modal-title" id="paraModalLabel">Climbing the Parachute Jump</h4>
 					</div>
-					<div class="modal-body para-body">
+					<div class="modal-body" id="paraModBody">
 						<!--Video markup here<iframe width="100%" height="400px" src="http://www.youtube.com/embed/SIR0jxqfl4c?html5=1" frameborder="0" allowfullscreen></iframe>-->
 					</div>
 					<div class="modal-footer">
